@@ -12,7 +12,7 @@ body {
     font-size: 1em;
 }
 
-body, .container, header, nav ul, top-section, bottom-section, footer {
+body, .container, header, nav ul, .top-section, .bottom-section, footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,12 +167,15 @@ footer span {
 
 /*----------Screens at 768px-1199px----------*/
 @media all and (min-width: 768px) {
-
+    .bottom-section {
+        justify-content: space-between;
+        align-items: stretch;
+    }
     .section-one,
     .section-two,
     .section-three {
         border-top: 1px solid #eee;
-        width: 33%;
+        flex: 1 1 30%;
 }
     .section-two {
         border-left: 1px solid #eee;
@@ -199,6 +202,9 @@ footer span {
     header h1 {
         width: auto;
         border-style: none;
+    }
+    header nav {
+        margin-top: 10px;
     }
     header nav ul {
         flex-flow: row;
